@@ -1,4 +1,4 @@
-name: Docker build and push
+name: CI
  
 on:
   push:
@@ -11,7 +11,7 @@ on:
     - cron:  '0 0 * * 4'
 
 jobs:
-  docker_build:
+  lint-with-build:
     runs-on: ubuntu-latest
 
     steps:
