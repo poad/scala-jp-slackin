@@ -1,0 +1,27 @@
+name: Docker build and push
+ 
+on:
+  push:
+    branches:
+    - main 
+  pull_request:
+    branches:
+      - main
+  schedule:
+    - cron:  '0 0 * * 4'
+
+jobs:
+  docker_build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@master
+    - name: Use Node.js 14.x
+      uses: actions/setup-node@v1
+      with:
+        node-version: 14.x
+    - name: Build and lint
+      run: |
+        yarn install
+        yarn lint --fix
+        yarn build
