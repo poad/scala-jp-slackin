@@ -1,27 +1,33 @@
 module.exports = {
-    "env": {
-        "browser": true,
-        "es2021": true,
-        "jest": true
+    root: true,
+    env: {
+        browser: true,
+        node: true,
+        es2021: true,
+        jest: true
     },
-    "extends": [
-        "plugin:react/recommended",
-        "airbnb"
-    ],
-    "parser": "@typescript-eslint/parser",
-    "parserOptions": {
-        "ecmaFeatures": {
-            "jsx": true
+    parserOptions: {
+        ecmaFeatures: {
+            jsx: true
         },
-        "ecmaVersion": 12,
-        "sourceType": "module"
+        project: './tsconfig.json',
+        useJSXTextNode: true
     },
-    "plugins": [
-        "react",
-        "@typescript-eslint"
+    extends: [
+        'plugin:react/recommended',
+        'plugin:@next/next/recommended',
+        'plugin:@typescript-eslint/recommended'
     ],
+    plugins: [
+        'react'
+    ],
+    settings: {
+        react: {
+            version: "detect"
+        }
+    },
     // add your custom rules here
-    "rules": {
+    rules: {
         '@typescript-eslint/indent': [
             'error',
             2
@@ -31,14 +37,18 @@ module.exports = {
             'always',
             { markers: ['/ <reference'] }
         ],
-        'max-len': ['error', { 'code': 100 }],
+        'import/no-extraneous-dependencies': ['off', {
+            devDependencies: true,
+            optionalDependencies: false,
+        }],
+        'max-len': ['error', { 'code': 200 }],
+        '@next/next/no-img-element': ['off'],
         'prefer-promise-reject-errors': ['off'],
-        'react/jsx-filename-extension': [1, { 'extensions': ['.js', '.jsx','.ts', '.tsx'] }],
+        'react/jsx-filename-extension': ['off'],
         'react/prop-types': ['off'],
         'import/extensions': ['off'],
         'jsx-a11y/anchor-is-valid': ['off'],
         'no-return-assign': ['off'],
-        'react/react-in-jsx-scope': ['off'],
-        'react/jsx-props-no-spreading': ['off'],
+        'react/display-name': ['off'],
     }
-};
+}
