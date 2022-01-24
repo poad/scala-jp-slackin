@@ -30,5 +30,8 @@
     "eslint-plugin-react": "latest",
     "eslint-plugin-react-hooks": "latest",
     "typescript": "latest"
+  },
+  "resolutions": {
+    "node-fetch": "2.6.7"
   }
 }
