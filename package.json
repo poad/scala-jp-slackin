@@ -11,7 +11,7 @@
   "dependencies": {
     "date-fns": "latest",
     "gray-matter": "latest",
-    "next": "^12.0.8",
+    "next": "latest",
     "react": "latest",
     "react-dom": "latest",
     "remark": "latest",
@@ -20,18 +20,15 @@
   "devDependencies": {
     "@types/node": "latest",
     "@types/react": "latest",
-    "@typescript-eslint/eslint-plugin": "^5.10.1",
-    "@typescript-eslint/parser": "^5.10.1",
+    "@typescript-eslint/eslint-plugin": "latest",
+    "@typescript-eslint/parser": "latest",
     "eslint": "latest",
     "eslint-config-airbnb": "latest",
-    "eslint-config-next": "^12.0.8",
+    "eslint-config-next": "latest",
     "eslint-plugin-import": "latest",
     "eslint-plugin-jsx-a11y": "latest",
     "eslint-plugin-react": "latest",
     "eslint-plugin-react-hooks": "latest",
     "typescript": "latest"
-  },
-  "resolutions": {
-    "node-fetch": "2.6.7"
   }
 }
