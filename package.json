@@ -18,7 +18,7 @@
     "remark-html": "latest"
   },
   "devDependencies": {
-    "@types/node": "^17.0.15",
+    "@types/node": "^17.0.16",
     "@types/react": "latest",
     "@typescript-eslint/eslint-plugin": "latest",
     "@typescript-eslint/parser": "latest",
