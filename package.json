@@ -18,10 +18,10 @@
     "remark-html": "latest"
   },
   "devDependencies": {
-    "@types/node": "^17.0.21",
+    "@types/node": "latest",
     "@types/react": "latest",
-    "@typescript-eslint/eslint-plugin": "^5.13.0",
-    "@typescript-eslint/parser": "^5.13.0",
+    "@typescript-eslint/eslint-plugin": "latest",
+    "@typescript-eslint/parser": "latest",
     "eslint": "latest",
     "eslint-config-airbnb": "latest",
     "eslint-config-next": "latest",
