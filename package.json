@@ -7,7 +7,7 @@
     "build": "next build",
     "export": "next export",
     "start": "next start -p $PORT",
-    "lint": "eslint --ext .ts,.tsx src"
+    "lint": "next lint --ext .ts,.tsx src"
   },
   "dependencies": {
     "date-fns": "*",
