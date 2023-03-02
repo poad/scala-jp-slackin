@@ -31,8 +31,5 @@
     "eslint-plugin-react": "*",
     "eslint-plugin-react-hooks": "*",
     "typescript": "*"
-  },
-  "resolutions": {
-    "json5": ">=2.2.2"
   }
 }
