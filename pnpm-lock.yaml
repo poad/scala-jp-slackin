@@ -451,16 +451,16 @@ packages:
   /@ungap/structured-clone@1.2.0:
     resolution: {integrity: sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==}
 
-  /acorn-jsx@5.3.2(acorn@8.10.0):
+  /acorn-jsx@5.3.2(acorn@8.11.0):
     resolution: {integrity: sha512-rq9s+JNhf0IChjtDXxllJ7g41oZk5SlXtp0LHwyA5cejwn7vKmKp4pPri6YEePv2PU65sAsegbXtIinmDFDXgQ==}
     peerDependencies:
       acorn: ^6.0.0 || ^7.0.0 || ^8.0.0
     dependencies:
-      acorn: 8.10.0
+      acorn: 8.11.0
     dev: true
 
-  /acorn@8.10.0:
-    resolution: {integrity: sha512-F0SAmZ8iUtS//m8DmCTA0jlh6TDKkHQyK6xc6V4KDTyZKA9dnvX9/3sRTVQrWm79glUAZbnmmNcdYwUIHWVybw==}
+  /acorn@8.11.0:
+    resolution: {integrity: sha512-hNiSyky+cuYVALBrsjB7f9gMN9P4u09JyAiMNMLaVfsmkDJuH84M1T/0pfDX/OJfGWcobd2A7ecXYzygn8wibA==}
     engines: {node: '>=0.4.0'}
     hasBin: true
     dev: true
@@ -1198,8 +1198,8 @@ packages:
     resolution: {integrity: sha512-oruZaFkjorTpF32kDSI5/75ViwGeZginGGy2NoOSg3Q9bnwlnmDm4HLnkl0RE3n+njDXR037aY1+x58Z/zFdwQ==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dependencies:
-      acorn: 8.10.0
-      acorn-jsx: 5.3.2(acorn@8.10.0)
+      acorn: 8.11.0
+      acorn-jsx: 5.3.2(acorn@8.11.0)
       eslint-visitor-keys: 3.4.3
     dev: true
 
@@ -1529,8 +1529,8 @@ packages:
       zwitch: 2.0.4
     dev: false
 
-  /hast-util-sanitize@5.0.0:
-    resolution: {integrity: sha512-L0g/qhOA82zG2hA3O29hnlv4mLU7YVVT1if5JZSr2tKO1ywkQbuMDcN05btgX0HtpqDXQniAM0ar0K+Lv4MDBQ==}
+  /hast-util-sanitize@5.0.1:
+    resolution: {integrity: sha512-IGrgWLuip4O2nq5CugXy4GI2V8kx4sFVy5Hd4vF7AR2gxS0N9s7nEAVUyeMtZKZvzrxVsHt73XdTsno1tClIkQ==}
     dependencies:
       '@types/hast': 3.0.2
       '@ungap/structured-clone': 1.2.0
@@ -2451,10 +2451,10 @@ packages:
     resolution: {integrity: sha512-B9JqA5i0qZe0Nsf49q3OXyGvyXuZFDzAP2iOFLEumymuYJITVpiH1IgsTEwTpdptDmZlMDMWeDmSawdaJIGCXQ==}
     dependencies:
       '@types/mdast': 4.0.2
-      hast-util-sanitize: 5.0.0
+      hast-util-sanitize: 5.0.1
       hast-util-to-html: 9.0.0
       mdast-util-to-hast: 13.0.2
-      unified: 11.0.3
+      unified: 11.0.4
     dev: false
 
   /remark-parse@11.0.0:
@@ -2463,7 +2463,7 @@ packages:
       '@types/mdast': 4.0.2
       mdast-util-from-markdown: 2.0.0
       micromark-util-types: 2.0.0
-      unified: 11.0.3
+      unified: 11.0.4
     transitivePeerDependencies:
       - supports-color
     dev: false
@@ -2473,7 +2473,7 @@ packages:
     dependencies:
       '@types/mdast': 4.0.2
       mdast-util-to-markdown: 2.1.0
-      unified: 11.0.3
+      unified: 11.0.4
     dev: false
 
   /remark@15.0.1:
@@ -2482,7 +2482,7 @@ packages:
       '@types/mdast': 4.0.2
       remark-parse: 11.0.0
       remark-stringify: 11.0.0
-      unified: 11.0.3
+      unified: 11.0.4
     transitivePeerDependencies:
       - supports-color
     dev: false
@@ -2851,8 +2851,8 @@ packages:
     resolution: {integrity: sha512-JlCMO+ehdEIKqlFxk6IfVoAUVmgz7cU7zD/h9XZ0qzeosSHmUJVOzSQvvYSYWXkFXC+IfLKSIffhv0sVZup6pA==}
     dev: true
 
-  /unified@11.0.3:
-    resolution: {integrity: sha512-jlCV402P+YDcFcB2VcN/n8JasOddqIiaxv118wNBoZXEhOn+lYG7BR4Bfg2BwxvlK58dwbuH2w7GX2esAjL6Mg==}
+  /unified@11.0.4:
+    resolution: {integrity: sha512-apMPnyLjAX+ty4OrNap7yumyVAMlKx5IWU2wlzzUdYJO9A8f1p9m/gywF/GM2ZDFcjQPrx59Mc90KwmxsoklxQ==}
     dependencies:
       '@types/unist': 3.0.1
       bail: 2.0.2
