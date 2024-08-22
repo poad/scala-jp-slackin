@@ -12,20 +12,20 @@
   "dependencies": {
     "date-fns": "^3.6.0",
     "gray-matter": "^4.0.3",
-    "next": "^14.2.5",
+    "next": "^14.2.6",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "remark": "^15.0.1",
     "remark-html": "^16.0.1"
   },
   "devDependencies": {
-    "@types/node": "^22.4.2",
+    "@types/node": "^22.5.0",
     "@types/react": "^18.3.4",
     "@typescript-eslint/eslint-plugin": "^8.2.0",
     "@typescript-eslint/parser": "^8.2.0",
     "eslint": "^9.9.0",
     "eslint-config-airbnb": "^19.0.4",
-    "eslint-config-next": "^14.2.5",
+    "eslint-config-next": "^14.2.6",
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-jsx-a11y": "^6.9.0",
     "eslint-plugin-react": "^7.35.0",
