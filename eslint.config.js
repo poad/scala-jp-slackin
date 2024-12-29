@@ -24,12 +24,19 @@ export default tseslint.config(
       'src/tsconfig.json',
       'src/stories',
       '**/*.css',
-      'node_modules/**/*',
-      './.next/*',
+      'node_modules',
+      '.next',
       'out',
       '.storybook',
+      '*.json',
+      '*.js',
+      '*.yaml',
+      'public',
+      'LICENSE',
+      '.npmrc',
+      '*.md'
     ],
-    files: ['src/**/*.{jsx,tsx}'],
+    files: ['src/**/*.tsx', 'src/**/*.ts', '!src/**/*.ts'],
     plugins: {
       'jsx-a11y': jsxA11yPlugin,
       '@next/next': nextPlugin,
@@ -38,6 +45,7 @@ export default tseslint.config(
       '@stylistic/jsx': stylisticJsx,
     },
     extends: [
+      // @ts-ignore
       ...compat.config(reactHooksPlugin.configs.recommended),
       ...compat.config(jsxA11yPlugin.configs.recommended),
     ],
