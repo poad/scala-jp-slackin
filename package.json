@@ -2,13 +2,14 @@
   "name": "scala-jp-slackin",
   "version": "0.0.1",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "export": "next export",
     "start": "next start -p $PORT",
-    "lint": "eslint ./src/**/*.tsx",
-    "lint-fix": "eslint --fix ./src/**/*.tsx"
+    "lint": "eslint './src/**/*.{tsx,ts}'",
+    "lint-fix": "eslint --fix './src/**/*.{tsx,ts}'"
   },
   "dependencies": {
     "date-fns": "^4.1.0",
