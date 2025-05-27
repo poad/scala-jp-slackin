@@ -24,13 +24,13 @@
     "@eslint/eslintrc": "^3.3.1",
     "@eslint/js": "^9.27.0",
     "@next/eslint-plugin-next": "15.3.2",
-    "@stylistic/eslint-plugin": "^4.2.0",
+    "@stylistic/eslint-plugin": "^4.4.0",
     "@stylistic/eslint-plugin-js": "^4.2.0",
     "@stylistic/eslint-plugin-jsx": "^4.2.0",
     "@stylistic/eslint-plugin-plus": "^4.2.0",
     "@stylistic/eslint-plugin-ts": "^4.2.0",
     "@types/node": "^22.15.21",
-    "@types/react": "19.1.5",
+    "@types/react": "19.1.6",
     "@types/react-dom": "19.1.5",
     "eslint": "^9.25.1",
     "eslint-config-next": "15.3.2",
@@ -50,7 +50,7 @@
   "packageManager": "pnpm@10.10.0",
   "pnpm": {
     "overrides": {
-      "@types/react": "19.1.5",
+      "@types/react": "19.1.6",
       "@types/react-dom": "19.1.5"
     }
   }
