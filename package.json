@@ -38,7 +38,7 @@
     "eslint-plugin-jsx-a11y": "^6.10.2",
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^5.2.0",
-    "pnpm": "^10.13.0",
+    "pnpm": "^10.13.1",
     "typescript": "^5.8.3",
     "typescript-eslint": "^8.36.0"
   },
@@ -47,7 +47,7 @@
     "yarn": "use pnpm please!",
     "pnpm": ">=8.7.1"
   },
-  "packageManager": "pnpm@10.12.4",
+  "packageManager": "pnpm@10.13.1",
   "pnpm": {
     "overrides": {
       "@types/react": "19.1.8",
