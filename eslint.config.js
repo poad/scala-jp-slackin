@@ -69,7 +69,7 @@ export default tseslint.config(
       '@next/next/no-img-element': 'error',
       '@next/next/no-page-custom-font': 'off',
       '@stylistic/semi': ['error', 'always'],
-      // '@stylistic/indent': ['error', 2],
+      '@stylistic/indent': ['error', 2],
       '@stylistic/comma-dangle': ['error', 'always-multiline'],
       '@stylistic/arrow-parens': ['error', 'always'],
       '@stylistic/quotes': ['error', 'single'],
