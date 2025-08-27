@@ -41,8 +41,6 @@ export default tseslint.config(
       'jsx-a11y': jsxA11yPlugin,
       '@next/next': nextPlugin,
       '@stylistic': stylistic,
-      '@stylistic/ts': stylistic,
-      '@stylistic/jsx': stylistic,
     },
     extends: [
       ...compat.config(reactHooksPlugin.configs.recommended),
