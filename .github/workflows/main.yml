@@ -10,8 +10,6 @@ on:
   schedule:
     - cron:  '0 0 * * 4'
 
-permissions: write-all
-
 jobs:
   lint-with-build:
     runs-on: ubuntu-latest
