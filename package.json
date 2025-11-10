@@ -43,7 +43,7 @@
     "yarn": "use pnpm please!",
     "pnpm": ">=8.7.1"
   },
-  "packageManager": "pnpm@10.20.0",
+  "packageManager": "pnpm@10.21.0",
   "pnpm": {
     "overrides": {
       "@types/react": "19.2.2",
