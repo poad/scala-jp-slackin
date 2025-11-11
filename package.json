@@ -36,7 +36,7 @@
     "eslint-plugin-react-hooks": "^7.0.1",
     "pnpm": "^10.21.0",
     "typescript": "^5.9.3",
-    "typescript-eslint": "^8.46.3"
+    "typescript-eslint": "^8.46.4"
   },
   "engines": {
     "npm": "use pnpm please!",
