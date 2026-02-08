@@ -1,1 +1,6 @@
 enablePrePostScripts: true
+
+overrides:
+  eslint: '>=10'
+  '@eslint/js': '>=10'
+  '@stylistic/eslint-plugin': '>=5.0.0'
