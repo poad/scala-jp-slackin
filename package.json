@@ -8,8 +8,8 @@
     "build": "next build",
     "export": "next export",
     "start": "next start -p $PORT",
-    "lint": "eslint './src/**/*.{tsx,ts}'",
-    "lint-fix": "eslint --fix './src/**/*.{tsx,ts}'"
+    "lint": "eslint",
+    "lint-fix": "eslint --fix"
   },
   "dependencies": {
     "date-fns": "^4.1.0",
