@@ -2,57 +2,58 @@
 
 import { defineConfig } from 'eslint/config';
 import eslint from '@eslint/js';
-import reactHooks from 'eslint-plugin-react-hooks';
-import jsxA11yPlugin from 'eslint-plugin-jsx-a11y';
+import nextVitals from 'eslint-config-next/core-web-vitals';
+import { configs, parser } from 'typescript-eslint';
 import stylistic from '@stylistic/eslint-plugin';
+import pluginPromise from 'eslint-plugin-promise';
 
-import tseslint from 'typescript-eslint';
-import { FlatCompat } from '@eslint/eslintrc';
+import { includeIgnoreFile } from '@eslint/compat';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 
-const compat = new FlatCompat();
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const gitignorePath = path.resolve(__dirname, '.gitignore');
 
 export default defineConfig(
+  includeIgnoreFile(gitignorePath),
   {
     ignores: [
-      '**/*.d.ts',
-      '*.{js,jsx}',
-      'src/tsconfig.json',
-      'src/stories',
-      '**/*.css',
-      'node_modules',
       '.next',
+      '**/*.d.ts',
       'out',
-      '.storybook',
-      '*.json',
-      '*.js',
-      '*.yaml',
-      'public',
-      'LICENSE',
-      '.npmrc',
-      '*.md'
+      '**/gql/**/*',
+      'cdk.out',
+      '**/generated/**/*.*',
+      'src/gql/*.ts',
+      'public/**/*.js',
+      'cdk/**/*',
+      'storybook-static',
     ],
   },
+  ...nextVitals,
   eslint.configs.recommended,
-  ...tseslint.configs.strict,
-  ...tseslint.configs.stylistic,
-  // ...compat.config({
-  //   extends: ['next'],
-  //   settings: {
-  //     next: {
-  //       rootDir: '.',
-  //     },
-  //   },
-  // }),
-  reactHooks.configs.flat.recommended,
+  ...configs.strict,
+  ...configs.stylistic,
+  // @ts-expect-error ignore type errors
+  pluginPromise.configs['flat/recommended'],
   {
-    files: ['src/**/*.tsx', 'src/**/*.ts', '!src/**/*.ts'],
-    plugins: {
-      'jsx-a11y': jsxA11yPlugin,
-      '@stylistic': stylistic,
-    },
-    extends: [
-      ...compat.config(jsxA11yPlugin.configs.recommended),
+    files: [
+      'src/**/*.ts',
+      'src/**/*.tsx',
+      '*.ts',
+      '*.tsx',
+      '.storybook/**/*.ts',
     ],
+    languageOptions: {
+      ecmaVersion: 'latest',
+      sourceType: 'module',
+      parser,
+      parserOptions: {
+        projectService: true,
+        tsconfigRootDir: __dirname,
+      },
+    },
     settings: {
       react: {
         version: 'detect',
@@ -62,16 +63,22 @@ export default defineConfig(
         { name: 'Link', linkAttribute: 'to' },
         { name: 'NavLink', linkAttribute: 'to' },
       ],
+      'import/internal-regex': '^~/',
       'import/resolver': {
-        typescript: {},
+        node: true,
+        typescript: true,
       },
     },
+    plugins: {
+      '@stylistic': stylistic,
+    },
     rules: {
-      '@stylistic/semi': ['error', 'always'],
-      '@stylistic/indent': ['error', 2],
-      '@stylistic/comma-dangle': ['error', 'always-multiline'],
-      '@stylistic/arrow-parens': ['error', 'always'],
+      '@next/next/no-duplicate-head': 'off',
+      '@next/next/no-img-element': 'error',
+      '@next/next/no-page-custom-font': 'off',
       '@stylistic/quotes': ['error', 'single'],
+      '@stylistic/semi': ['error', 'always'],
+      '@stylistic/comma-dangle': ['error', 'always-multiline'],
     },
   },
 );
