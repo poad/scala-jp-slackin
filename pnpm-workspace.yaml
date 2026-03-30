@@ -1,1 +1,4 @@
-enablePrePostScripts: true
+strictPeerDependencies: false
+
+overrides:
+  eslint: ^9
