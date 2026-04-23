@@ -29,7 +29,7 @@
     "@types/node": "^25.6.0",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
-    "eslint": "^10.2.1",
+    "eslint": "^9.39.4",
     "eslint-config-next": "^16.2.4",
     "eslint-plugin-promise": "^7.2.1",
     "typescript": "^6.0.3",
@@ -40,5 +40,5 @@
     "yarn": "use pnpm please!",
     "pnpm": ">=8.7.1"
   },
-  "packageManager": "pnpm@10.33.1"
+  "packageManager": "pnpm@10.33.2"
 }
