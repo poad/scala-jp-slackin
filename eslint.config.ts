@@ -1,13 +1,10 @@
-// @ts-check
-
-import { defineConfig } from 'eslint/config';
+import { defineConfig, includeIgnoreFile } from 'eslint/config';
 import eslint from '@eslint/js';
 import nextVitals from 'eslint-config-next/core-web-vitals';
 import { configs, parser } from 'typescript-eslint';
 import stylistic from '@stylistic/eslint-plugin';
 import pluginPromise from 'eslint-plugin-promise';
 
-import { includeIgnoreFile } from '@eslint/compat';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -35,7 +32,6 @@ export default defineConfig(
   eslint.configs.recommended,
   ...configs.strict,
   ...configs.stylistic,
-  // @ts-expect-error ignore type errors
   pluginPromise.configs['flat/recommended'],
   {
     files: [
