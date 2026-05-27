@@ -15,7 +15,7 @@ fi
 echo ""
 pwd
 
-if ! (pnpm dlx pnpm@latest self-update && pnpm install && pnpm up && pnpm audit --fix override && pnpm up && pnpm lint-fix && pnpm build); then
+if ! (disable-checkout-persist-credentials && pnx pnpm@latest self-update && pnpm install && pnpm up && pnpm audit --fix override && pnpm up && pnpm lint-fix && pnpm build); then
   cd "${CUR}" || exit
   exit 1
 fi
