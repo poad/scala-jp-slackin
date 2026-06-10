@@ -10,8 +10,7 @@ blockExoticSubdeps: true
 minimumReleaseAge: 10080 # 7 days in minutes
 
 minimumReleaseAgeExclude:
-  - postcss@8.5.10
-  - eslint@10.4.0
+  - pnpm@11.5.3
 
 overrides:
   eslint-import-resolver-typescript: '^4.4.4'
